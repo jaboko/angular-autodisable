@@ -69,7 +69,7 @@
               getLoadingClass(attrs),
               getCallbacks(attrs[CLICK_ATTR]));
       } else if (attrs.hasOwnProperty(SUBMIT_ATTR)) {
-          handler = handlerInstance(element.find('button[type=submit]'),
+          handler = handlerInstance($('button[type=submit], input[type=submit]', element),
               SUBMIT_EVENT,
               getLoadingClass(attrs),
               getCallbacks(attrs[SUBMIT_ATTR]));
